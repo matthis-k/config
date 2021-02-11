@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $1 == f ]; then
+    grim - | swappy -f -
+elif [ $1 == r ]; then
+    grim -g "$(slurp)" - | swappy -f -
+elif [ $1 == w ]; then
+    grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | swappy -f -
+fi
