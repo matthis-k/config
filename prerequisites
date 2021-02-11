@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Insalling dependencies..."
+sudo pacman -S base-devel rustup nodejs npm patch git
+
+echo "Setting up rustup..."
+rustup default nightly
+rustup toolchain add stable
