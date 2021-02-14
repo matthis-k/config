@@ -23,6 +23,7 @@ vim.o.undofile = true
 -- other global options
 vim.o.showmode = false
 vim.o.termguicolors = true
+vim.o.timeoutlen = 200
 
 vim.wo.linebreak = true
 vim.wo.breakindent = true
