@@ -106,7 +106,7 @@ bindsym $mod+x exec wlogout
 
 
     bindsym $mod+q kill
-    bindsym $mod+a exec $menu
+    bindsym --release Super_L exec $menu
     floating_modifier $mod normal
     bindsym $mod+Shift+r reload
     bindsym $mod+Shift+e exec nwgbar -o 0.4
