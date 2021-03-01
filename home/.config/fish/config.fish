@@ -24,6 +24,9 @@ alias 'mkd'='mkdir'
 alias 'rmd'='rm -rf'
 alias 'cp'='cp -v'
 alias 'mv'='mv -v'
-#alias 'yay -Syu'='yay -Syu --noconfirm'
+
+alias 'gimme'='paru -S --noconfirm'
+alias 'yeet'='paru -R --noconfirm'
+alias 'relax'='paru -Syu --noconfirm'
 
 #test "$TERM" != "linux" && starship init fish | source
