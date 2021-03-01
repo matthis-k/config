@@ -1,6 +1,8 @@
 vim.o.completeopt = 'menuone,noinsert,noselect'
 vim.o.shortmess = vim.o.shortmess .. 'c'
 
+vim.g.completion_matching_strategy_list = { "exact", "substring", "fuzzy" }
+
 require'lspconfig'.clangd.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.cssls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.jsonls.setup{ on_attach = require('completion').on_attach }
