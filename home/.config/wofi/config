@@ -1,0 +1,17 @@
+columns=2
+hide_scroll=false
+show=drun
+order=alphabetical
+lines=10
+line_wrap=word
+term=alacritty
+allow_images=true
+always_parse_args=true
+show_all=false
+print_command=false
+layer=overlay
+allow-images=true
+insensitive=true
+prompt=Search
+display_generic=true
+key_expand=Tab

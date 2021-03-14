@@ -1,63 +1,109 @@
-// -*- mode: json -*-
-
 {
-	"layer": "top",
-	"position": "top",
-
-	"modules-left": [
-		"sway/workspaces",
-        "sway/mode",
-	],
-	"modules-center": [
-		"clock",
-	],
-	"modules-right": [
-		"tray",
-		"pulseaudio",
-		"battery",
-	],
-
-	"sway/workspaces": {
-		"disable-scroll": true,
-		"format": "{name}"
-	},
-
-	"clock": {
-		"format": "{: DATE: %d.%m TIME: %H:%M}",
-		"tooltip": false
-	},
-
-	"pulseaudio": {
-		"format": "{icon} {volume:2}%",
-		"format-bluetooth": "{icon}  {volume}%",
-		"format-muted": "MUTE",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
-		"scroll-step": 5,
-		"on-click": "pamixer -t",
-		"on-click-right": "pavucontrol"
-	},
-	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		]
-	},
-	"tray": {
-		"icon-size": 20
-	}
+    "layer": "top",
+    "position": "top",
+    "height": 22,
+    "modules-left": ["clock", "sway/mode"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["tray", "idle_inhibitor", "network", "pulseaudio", "battery", "custom/powermenu"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "sway/mode": {
+        "tooltip": false
+    },
+    "sway/workspaces": {
+        "all-outputs": true,
+        "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": []
+        }
+    },
+    "custom/ping": {
+        "exec": "$HOME/.config/waybar/scripts/ping.sh",
+        "interval": 3,
+        "tooltip": false,
+        "format": "{} ms 龍"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "tooltip": false,
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": "1",
+        "tooltip": false
+    },
+    "custom/kernel": {
+        "exec": "uname -r",
+        "interval": "once",
+        "tooltip": false
+    },
+    "tray": {
+        "spacing": 5,
+        "icon-size": 14,
+        "tooltip": false
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        //"format-icons": [" ", " ", " ", " ", " ", " ", " ", " "],
+        "tooltip": false,
+    },
+    "custom/powermenu": {
+        "on-click": "nwgbar -b 2e3440ff",
+        "format": "⏻",
+        "tooltip": false
+    },
+    "custom/assistant": {
+        "exec": "assistant",
+	"interval": 20,
+    "format": "  {}",
+	"tooltip": false
+    },
+    "clock": {
+        "format": "  {:%a, %d %b %H:%M}",
+        "tooltip": false,
+    },
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "tooltip": false,
+        "on-click": "pavucontrol"
+    },
+    "network": {
+        "format-wifi": "{signalStrength}% ",
+        "format-ethernet": "Wired ",
+        "format-disconnected": " ⚠",
+        "tooltip": false,
+	"on-click": "alacritty -e nmtui"
+    }
 }

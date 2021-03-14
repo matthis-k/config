@@ -11,4 +11,5 @@
 ~/.config/wall.png
 ~/.config/wallpapers
 /bin/screenshot
+/bin/edit-config
 /etc/greetd
