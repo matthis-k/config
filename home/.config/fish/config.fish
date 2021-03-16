@@ -26,7 +26,10 @@ alias 'cp'='cp -v'
 alias 'mv'='mv -v'
 
 alias 'gimme'='paru -S --noconfirm'
+alias 'yeetusdeleus'='paru -Rcns --noconfirm'
 alias 'yeet'='paru -R --noconfirm'
 alias 'relax'='paru -Syu --noconfirm'
+alias 'please'='sudo'
+alias 'fucking'='sudo'
 
 #test "$TERM" != "linux" && starship init fish | source

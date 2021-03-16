@@ -1,171 +1,174 @@
+/* Polar Night */
+@define-color nord0 #2e3440;
+@define-color nord1 #3b4252;
+@define-color nord2 #434c5e;
+@define-color nord3 #4c566a;
+
+/* Snow Storm */
+@define-color nord4 #d8dee9;
+@define-color nord5 #e5e9f0;
+@define-color nord6 #eceff4;
+
+/* Frost */
+@define-color nord7 #8fbcbb;
+@define-color nord8 #88c0d0;
+@define-color nord9 #81a1c1;
+@define-color nord10 #5e81ac;
+
+/* Aurora */
+@define-color nord11 #bf616a;
+@define-color nord12 #d08770;
+@define-color nord13 #ebcb8b;
+@define-color nord14 #a3be8c;
+@define-color nord15 #b48ead;
+
+/* Simple color names */
+@define-color bgkdark   @nord0;
+@define-color bgkgrey   @nord2;
+@define-color text      @nord4;
+@define-color lightblue @nord7;
+@define-color darkblue  @nord10;
+@define-color red       @nord11;
+@define-color orange    @nord12;
+@define-color yellow    @nord13;
+@define-color green     @nord14;
+@define-color purple    @nord15;
+
 * {
-  padding-bottom: 0px;
-  border: none;
-  border-radius: 0;
-  font-family: "Fira Code Nerd Font";
-  font-size: 14px;
-  min-height: 0;
+	font-size: 12px;
+	font-family: "Kanit Medium", "Font Awesome 5 Free";
 }
 
 window#waybar {
-  background: transparent;
-  color: rgba(255, 255, 255, 1);
+	color: @lightblue;
+	background: @bgkdark;
+	border: 2px solid @darkblue;
+}
+
+window#waybar.left {
+	border-top: none;
+}
+
+/* Base styling for modules */
+#workspaces,
+#mode,
+#window,
+#idle_inhibitor,
+#custom-weather,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#battery,
+#backlight,
+#disk,
+#custom-updates,
+#custom-auroch,
+#custom-swap,
+#custom-spotify,
+#custom-separator,
+#custom-shutdown,
+#custom-reboot,
+#custom-covid,
+#taskbar,
+#tray {
+	padding: 1px 10px 0px 10px;
+	margin: 5px 0px 5px 0px;
+	background: @bgkgrey;
+}
+
+#custom-separator {
+	opacity: 0;
+	padding: 0px;
 }
 
 #workspaces {
-  margin-left: 3px;
+	margin-left: 5px;
+	padding: 0px;
 }
-
 #workspaces button {
-  margin: 0 3px 3px 0;
-  padding: 2px 0 1px 0;
-  background: #404757;
-  color: #81a1c1;
-  background-color: #404757;
-  transition-duration: 0;
-  font-weight: bold;
-  border-radius: 2px;
+	color: @lightblue;
+	margin: 0;
+	padding: 1px 5px 0px 5px;
 }
-
 #workspaces button.focused {
-  background-color: #81a1c1;
-  color: #404757;
-  font-weight: bold;
-  transition-duration: 0;
+	color: @purple;
 }
-
-#workspaces button.persistent {
-  font-weight: normal;
-  transition-duration: 0;
-}
-
-#custom-powermenu {
-  background-color: #81a1c1;
-  margin-bottom: 3px;
-  color: #404757;
-  margin-left: 0px;
-  margin-right: 3px;
-  padding: 1px 10px 0 5px;
-  border-radius: 2px;
-}
-
-#custom-assistant {
-  background-color: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #eceff4;
-  margin-left: 3px;
-  margin-right: 0px;
-  padding: 1px 6px 0 6px;
-  font-weight: normal;
-  border-radius: 2px;
-}
-
-#tray {
-  background: #404757;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: white;
-  margin-right: 0;
-  padding-top: 1px;
-  padding-left: 4px;
-  padding-right: 2px;
-  font-family: Iosevka Nerd Font;
-  border-radius: 2px 0 0 2px;
-}
-
-#cpu {
-  background: #404757;
-  margin-bottom: 3px;
-  color: #eceff4;
-  margin-right: 3px;
-  padding: 1px 10px 0 6px;
-  border-radius: 2px;
-}
-
-#pulseaudio {
-  background: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #404757;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 1px 12px 0 6px;
-  font-weight: bold;
-  border-radius: 0;
-}
-
-#clock {
-  background: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #404757;
-  margin-left: 3px;
-  margin-right: 0px;
-  padding: 1px 6px 0 6px;
-  font-weight: bold;
-  border-radius: 2px;
-}
-
 
 #mode {
-  background: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #404757;
-  margin-left: 3px;
-  margin-right: 0px;
-  padding: 1px 6px 0 6px;
-  font-weight: bold;
-  border-radius: 2px;
+	color: @red;
 }
 
-#network {
-  background: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #404757;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding: 1px 14px 0 6px;
-  font-weight: bold;
-  border-radius: 2px 0 0 2px;
+#disk.1,
+#memory,
+#custom-reboot,
+#custom-updates {
+	padding-right: 5px;
+	border-right: 0px;
+}
+#disk.2,
+#custom-swap,
+#custom-shutdown,
+#custom-auroch {
+	padding-left: 5px;
+	border-left: 0px;
 }
 
-#custom-ping {
-  background: #404757;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #eceff4;
-  margin-left: 0px;
-  margin-right: 3px;
-  padding: 1px 10px 0 6px;
-  border-radius: 2px;
+#custom-shutdown {
+	margin-right: 5px;
 }
 
-#idle_inhibitor {
-  background: #404757;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #eceff4;
-  margin-left: 0px;
-  margin-right: 3px;
-  padding: 1px 12px 0 4px;
-  border-radius: 0 2px 2px 0;
+#battery.warning,
+#cpu.warning,
+#custom-updates.checking,
+#custom-auroch.checking,
+#disk.1.warning,
+#disk.2.warning,
+#memory.warning {
+	color: @yellow;
 }
 
-#idle_inhibitor.activated {
-  color: #a3be8c;
+#battery.critical,
+#cpu.critical,
+#custom-auroch.error,
+#custom-covid.UP,
+#custom-updates.error,
+#disk.1.critical,
+#disk.2.critical,
+#memory.critical {
+	color: @orange;
 }
 
-#battery {
-  background: #81a1c1;
-  margin-bottom: 3px;
-  margin-left: 3px;
-  color: #404757;
-  margin-left: 0px;
-  margin-right: 3px;
-  padding: 1px 8px 0 6px;
-  font-weight: bold;
-  border-radius: 0 2px 2px 0;
+#custom-auroch.no-updates,
+#custom-covid.DOWN,
+#custom-updates.no-updates {
+	color: @green;
 }
+#custom-updates.updates,
+#custom-auroch.updates {
+	color: @purple;
+}
+
+
+#taskbar,
+#tray,
+#window {
+	margin: 5px;
+	padding: 0;
+}
+#taskbar {
+	margin-top: 3px;
+}
+#taskbar button {
+	color: @lightblue;
+	padding: 5px 3px 1px 3px;
+}
+#taskbar button.active {
+	background: @nord3;
+}
+
+#tray,
+#window {
+	padding: 5px 0px 5px 0px;
+}
+

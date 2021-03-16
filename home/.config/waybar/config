@@ -1,109 +1,126 @@
+// -*- mode: json -*-
+[
 {
-    "layer": "top",
-    "position": "top",
-    "height": 22,
-    "modules-left": ["clock", "sway/mode"],
-    "modules-center": ["sway/workspaces"],
-    "modules-right": ["tray", "idle_inhibitor", "network", "pulseaudio", "battery", "custom/powermenu"],
-    "sway/window": {
-        "max-length": 50
-    },
-    "sway/mode": {
-        "tooltip": false
-    },
-    "sway/workspaces": {
-        "all-outputs": true,
+	"layer": "bottom",
+	"position": "top",
+	"modules-left": [
+		"sway/workspaces",
+		"custom/separator",
+		"idle_inhibitor",
+		"custom/separator",
+		"sway/mode",
+		"custom/separator",
+        "wlr/taskbar"
+	],
+	"modules-center": [
+		"custom/separator",
+		"clock",
+		"custom/separator",
+		"battery"
+	],
+	"modules-right": [
+        "tray",
+		"custom/separator",
+		"backlight",
+		"custom/separator",
+		"pulseaudio",
+		"custom/separator",
+		//"tray",
+		//"custom/separator",
+		"custom/reboot",
+		"custom/shutdown"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+ 		"all-outputs": true,
+ 		"format": "{name} {icon}",
         "persistent_workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": [],
-        "6": [],
-        "7": [],
-        "8": [],
-        "9": []
-        }
-    },
-    "custom/ping": {
-        "exec": "$HOME/.config/waybar/scripts/ping.sh",
-        "interval": 3,
-        "tooltip": false,
-        "format": "{} ms 龍"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip": false,
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "interval": "1",
-        "tooltip": false
-    },
-    "custom/kernel": {
-        "exec": "uname -r",
-        "interval": "once",
-        "tooltip": false
-    },
-    "tray": {
-        "spacing": 5,
-        "icon-size": 14,
-        "tooltip": false
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 20,
-            "critical": 10
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": []
         },
-        "format": "{capacity}% ",
-        "format-charging": "{capacity}% ",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        //"format-icons": [" ", " ", " ", " ", " ", " ", " ", " "],
-        "tooltip": false,
-    },
-    "custom/powermenu": {
-        "on-click": "nwgbar -b 2e3440ff",
-        "format": "⏻",
-        "tooltip": false
-    },
-    "custom/assistant": {
-        "exec": "assistant",
-	"interval": 20,
-    "format": "  {}",
-	"tooltip": false
-    },
-    "clock": {
-        "format": "  {:%a, %d %b %H:%M}",
-        "tooltip": false,
-    },
-    "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "tooltip": false,
-        "on-click": "pavucontrol"
-    },
-    "network": {
-        "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "Wired ",
-        "format-disconnected": " ⚠",
-        "tooltip": false,
-	"on-click": "alacritty -e nmtui"
-    }
+		"format-icons": {
+			"urgent": "",
+			"focused": "",
+			"default": ""
+		}
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		}
+	},
+	"sway/mode": {
+		"format": "{}"
+	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": ["", ""],
+		"on-scroll-up": "brightnessctl set +5%",
+		"on-scroll-down": "brightnessctl set 5%-"
+	},
+	"clock": {
+		"format": "{:%a %d %b %H:%M}",
+		"tooltip": true
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%  {format_source}",
+		"format-bluetooth": "{icon} {volume}%  {format_source}",
+		"format-bluetooth-muted": " {icon}  {format_source}",
+		"format-muted": " {format_source}",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				"",
+				""
+			]
+		},
+		"on-click": "pavucontrol"
+	},
+	"battery": {
+		"states": {
+			"good": 100,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+	"custom/separator": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/shutdown": {
+		"format": "",
+		"on-click": "~/.config/waybar/modules/shutdown.sh",
+		"tooltip": false
+	},
+	"custom/reboot": {
+		"format": "",
+		"on-click": "~/.config/waybar/modules/reboot.sh",
+		"tooltip": false
+	}
 }
+]

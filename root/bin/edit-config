@@ -1,13 +1,15 @@
 #!/bin/bash
 
 options=(
-    "alacritty - $HOME/.config/alacritty/alacritty.yml"
+    "alacritty - $HOME/config/home/.config/alacritty/alacritty.yml"
     "config - $HOME/config"
     "edit-config - $HOME/config/root/bin/edit-config"
-    "neovim - $HOME/.config/nvim"
-    "sway - $HOME/.config/sway/config"
-    "waybar - $HOME/.config/waybar"
-    "wofi - $HOME/.config/wofi"
+    "fish - $HOME/config/home/.config/fish"
+    "neovim - $HOME/config/home/.config/nvim"
+    "sway - $HOME/config/home/.config/sway/config"
+    "waybar - $HOME/config/home/.config/waybar"
+    "wofi - $HOME/config/home/.config/wofi"
+    "zathura - $HOME/config/home/.config/zathura/zathurarc"
 )
 
 selected=$(
