@@ -1,9 +1,9 @@
 #!/bin/bash
-
-if [ $1 == f ]; then
+selection=$(printf "fullscreen\nwindow\nregion" | wofi -p "Screenshot kind" -L 3 -w 1 --show dmenu)
+if [[ $selection == fullscreen ]]; then
     grim - | swappy -f -
-elif [ $1 == r ]; then
+elif [[ $selection == region ]]; then
     grim -g "$(slurp)" - | swappy -f -
-elif [ $1 == w ]; then
+elif [[ $selection == window ]]; then
     grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | slurp)" - | swappy -f -
 fi

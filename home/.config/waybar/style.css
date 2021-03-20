@@ -35,18 +35,14 @@
 @define-color purple    @nord15;
 
 * {
-	font-size: 12px;
-	font-family: "Kanit Medium", "Font Awesome 5 Free";
+	font-size: 16px;
+	font-family: "Fira Code Nerd Font Mono", "Font Awesome 5 Free";
 }
 
 window#waybar {
 	color: @lightblue;
 	background: @bgkdark;
-	border: 2px solid @darkblue;
-}
-
-window#waybar.left {
-	border-top: none;
+	border: 1px solid @darkblue;
 }
 
 /* Base styling for modules */
@@ -54,27 +50,19 @@ window#waybar.left {
 #mode,
 #window,
 #idle_inhibitor,
-#custom-weather,
 #pulseaudio,
-#memory,
-#cpu,
 #clock,
 #battery,
 #backlight,
-#disk,
-#custom-updates,
-#custom-auroch,
-#custom-swap,
-#custom-spotify,
+#network,
 #custom-separator,
 #custom-shutdown,
-#custom-reboot,
-#custom-covid,
 #taskbar,
 #tray {
 	padding: 1px 10px 0px 10px;
 	margin: 5px 0px 5px 0px;
 	background: @bgkgrey;
+    border-radius: 5px;
 }
 
 #custom-separator {
@@ -92,63 +80,24 @@ window#waybar.left {
 	padding: 1px 5px 0px 5px;
 }
 #workspaces button.focused {
-	color: @purple;
+    border: 1px solid @green;
 }
 
 #mode {
 	color: @red;
 }
 
-#disk.1,
-#memory,
-#custom-reboot,
-#custom-updates {
-	padding-right: 5px;
-	border-right: 0px;
-}
-#disk.2,
-#custom-swap,
-#custom-shutdown,
-#custom-auroch {
-	padding-left: 5px;
-	border-left: 0px;
-}
-
 #custom-shutdown {
 	margin-right: 5px;
 }
 
-#battery.warning,
-#cpu.warning,
-#custom-updates.checking,
-#custom-auroch.checking,
-#disk.1.warning,
-#disk.2.warning,
-#memory.warning {
+#battery.warning {
 	color: @yellow;
 }
 
-#battery.critical,
-#cpu.critical,
-#custom-auroch.error,
-#custom-covid.UP,
-#custom-updates.error,
-#disk.1.critical,
-#disk.2.critical,
-#memory.critical {
+#battery.critical {
 	color: @orange;
 }
-
-#custom-auroch.no-updates,
-#custom-covid.DOWN,
-#custom-updates.no-updates {
-	color: @green;
-}
-#custom-updates.updates,
-#custom-auroch.updates {
-	color: @purple;
-}
-
 
 #taskbar,
 #tray,
@@ -164,7 +113,7 @@ window#waybar.left {
 	padding: 5px 3px 1px 3px;
 }
 #taskbar button.active {
-	background: @nord3;
+    border: 1px solid @green;
 }
 
 #tray,
