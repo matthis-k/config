@@ -24,7 +24,7 @@
 
     font pango:Fira Code Nerf Font 13px 
 
-    client.focused          #81a1c1 #81a1c1 #d8dee9 #88c0d0 #81a1c1
+    client.focused          #a3be8c #a3be8c #d8dee9 #88c0d0 #a3be8c
     client.focused_inactive #4c566a #4c566a #d8dee9 #88c0d0 #4c566a
     client.unfocused        #434c5e #434c5e #eceff4 #ebcb8b #434c5e
     client.urgent           #434c5e #d08770 #eceff4 #bf616a #bf616a
@@ -39,6 +39,7 @@
 #  
                                                                
     for_window [app_id="blueberry.py"] floating enable 
+    for_window [app_id="pavucontrol"] floating enable 
     for_window [window_role="pop-up"] floating enable
     for_window [window_role="bubble"] floating enable
     for_window [window_role="task_dialog"] floating enable

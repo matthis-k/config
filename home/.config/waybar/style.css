@@ -39,6 +39,11 @@
 	font-family: "Fira Code Nerd Font Mono", "Font Awesome 5 Free";
 }
 
+:hover {
+    border: 1px solid @purple;
+	background: @bgkgrey;
+}
+
 window#waybar {
 	color: @lightblue;
 	background: @bgkdark;
@@ -50,6 +55,7 @@ window#waybar {
 #mode,
 #window,
 #idle_inhibitor,
+#bluetooth,
 #pulseaudio,
 #clock,
 #battery,
@@ -74,6 +80,7 @@ window#waybar {
 	margin-left: 5px;
 	padding: 0px;
 }
+
 #workspaces button {
 	color: @lightblue;
 	margin: 0;
@@ -104,9 +111,6 @@ window#waybar {
 #window {
 	margin: 5px;
 	padding: 0;
-}
-#taskbar {
-	margin-top: 3px;
 }
 #taskbar button {
 	color: @lightblue;

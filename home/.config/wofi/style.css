@@ -1,7 +1,13 @@
+* {
+    font-size: 16px;
+    font-family: "Fira Code Nerd Font Mono", "Font Awesome 5 Free";
+    outline: none;
+}
+
 window {
     border-radius: 10px;
-    border: 3px solid #5e81ac;
-    background-color: #4c566a;
+    border: 2px solid #5e81ac;
+    background-color: #2e3440;
 }
 
 #input {
@@ -14,7 +20,7 @@ window {
     border-radius: 10px;
     margin: 5px;
     border: none;
-    background-color: #5e81ac;
+    background-color: #2e3440;
 }
 
 #input {
@@ -48,7 +54,7 @@ window {
 
 #entry:selected {
     border: 1px solid #a3be8c;
-    background-color: #81a1c1;
+    background-color: #4c566a;
     border-radius: 10px;
 }
 

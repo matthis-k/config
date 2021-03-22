@@ -18,6 +18,6 @@ selected=$(
 for e in "${options[@]}"
 do
     echo $e
-done | wofi -O alphabetical -L 5 -w 2 --show dmenu)
+done | wofi -O alphabetical -L 5 -w 2 --show dmenu | awk '{ print $3 }')
 
-[[ -z $selected ]] || alacritty -e sh -c "nvim $(echo $selected | awk '{ print $3 }')"
+[[ -z $selected ]] || alacritty -e sh -c "nvim $selected"

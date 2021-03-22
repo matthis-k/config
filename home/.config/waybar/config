@@ -23,6 +23,8 @@
 		"custom/separator",
 		"backlight",
 		"custom/separator",
+		"bluetooth",
+		"custom/separator",
         "network",
 		"custom/separator",
 		"pulseaudio",
@@ -37,7 +39,18 @@
         "on-click": "activate",
         "on-click-middle": "close"
     },
+    "bluetooth": {
+        "format": "{icon}",
+        "interval": 30,
+        "format-icons": {
+            "enabled": " [X]",
+            "disabled": " [ ]"
+        },
+        "tooltip-format": "{status}",
+        "on-click": "blueberry"
+    },
     "network": {
+        "tooltip-format": "{essid}",
         "format-wifi": "  {signalStrength}% ",
         "format-ethernet": "",
         "format-linked": "",
@@ -82,16 +95,13 @@
 		"on-scroll-down": "brightnessctl set 5%-"
 	},
 	"clock": {
-		"format": "{:%a %d %b %H:%M}",
+		"format": "{:%H:%M}",
+		"tooltip-format": "{:%a %d %b %H:%M}",
 		"tooltip": true
 	},
 	"pulseaudio": {
-		"format": "{icon} {volume}%  {format_source}",
-		"format-bluetooth": "{icon} {volume}%  {format_source}",
-		"format-bluetooth-muted": " {icon}  {format_source}",
-		"format-muted": " {format_source}",
-		"format-source": " {volume}%",
-		"format-source-muted": "",
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
@@ -129,7 +139,6 @@
 	"custom/shutdown": {
 		"format": "",
 		"on-click": "wlogout -p layer-shell -r 50",
-		"tooltip": false
 	},
 }
 ]
