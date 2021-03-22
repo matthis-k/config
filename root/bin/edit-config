@@ -1,0 +1,23 @@
+#!/bin/bash
+
+options=(
+    "alacritty - $HOME/config/home/.config/alacritty/alacritty.yml"
+    "bin - $HOME/config/root/bin"
+    "config - $HOME/config"
+    "edit-config - $HOME/config/root/bin/edit-config"
+    "fish - $HOME/config/home/.config/fish"
+    "neovim - $HOME/config/home/.config/nvim"
+    "sway - $HOME/config/home/.config/sway/config"
+    "waybar - $HOME/config/home/.config/waybar"
+    "wlogout - $HOME/config/home/.config/wlogout"
+    "wofi - $HOME/config/home/.config/wofi"
+    "zathura - $HOME/config/home/.config/zathura/zathurarc"
+)
+
+selected=$(
+for e in "${options[@]}"
+do
+    echo $e
+done | wofi -O alphabetical -L 10 -w 1 --show dmenu | awk '{ print $3 }')
+
+[[ -z $selected ]] || alacritty -e sh -c "nvim $selected"

@@ -11,4 +11,9 @@
 ~/.config/wall.png
 ~/.config/wallpapers
 /bin/screenshot
+/bin/edit-config
+/bin/wofi-shutdown
+/bin/wofi-reboot
+/bin/wofi-shutdown-menu
+/bin/exclusive-wofi
 /etc/greetd

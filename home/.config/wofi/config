@@ -1,0 +1,12 @@
+hide_scroll=false
+line_wrap=word
+term=alacritty
+allow_images=true
+always_parse_args=true
+show_all=false
+print_command=false
+layer=overlay
+allow-images=true
+insensitive=true
+display_generic=true
+key_expand=Tab
