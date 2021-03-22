@@ -29,6 +29,7 @@ alias 'gimme'='paru -S --noconfirm'
 alias 'yeetusdeleus'='paru -Rcns --noconfirm'
 alias 'yeet'='paru -R --noconfirm'
 alias 'relax'='paru -Syu --noconfirm'
+alias 'crispyclean'='paru -c --noconfirm'
 alias 'please'='sudo'
 alias 'fucking'='sudo'
 

@@ -11,7 +11,7 @@
     set $up k
     set $right l
     set $terminal alacritty
-    set $menu wofi -O alphabetical -L 7 -w 3 --show drun
+    set $menu wofi -O alphabetical -L 7 -w 2 --show drun
     set $browser firefox
 
 #          _           _                     _         _      
