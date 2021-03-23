@@ -26,7 +26,7 @@ alias 'cp'='cp -v'
 alias 'mv'='mv -v'
 
 alias 'gimme'='paru -S --noconfirm'
-alias 'yeetusdeleus'='paru -Rcns --noconfirm'
+alias 'yeetusdeletus'='paru -Rcns --noconfirm'
 alias 'yeet'='paru -R --noconfirm'
 alias 'relax'='paru -Syu --noconfirm'
 alias 'crispyclean'='paru -c --noconfirm'

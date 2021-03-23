@@ -41,7 +41,7 @@ window {
 }
 
 #scroll {
-    margin: 0px;
+    margin: -2px 0px;
     border: none;
 }
 
