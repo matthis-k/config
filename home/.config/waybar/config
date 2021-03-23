@@ -4,6 +4,8 @@
 	"layer": "bottom",
 	"position": "top",
 	"modules-left": [
+		"custom/menu",
+		"custom/separator",
 		"sway/workspaces",
 		"custom/separator",
 		"idle_inhibitor",
@@ -31,6 +33,10 @@
 		"custom/separator",
 		"custom/shutdown"
 	],
+    "custom/menu": {
+        "format": "",
+        "on-click": "wofi -p Run -L 10 -w 2 --show drun"
+    },
     "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 14,

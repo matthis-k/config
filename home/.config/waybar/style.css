@@ -63,6 +63,7 @@ window#waybar {
 #network,
 #custom-separator,
 #custom-shutdown,
+#custom-menu,
 #taskbar,
 #tray {
 	padding: 1px 10px 0px 10px;
@@ -76,9 +77,11 @@ window#waybar {
 	padding: 0px;
 }
 
+#custom-menu {
+    margin-left: 5px;
+}
 #workspaces {
-	margin-left: 5px;
-	padding: 0px;
+    padding: 0px;
 }
 
 #workspaces button {
