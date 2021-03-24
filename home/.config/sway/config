@@ -22,7 +22,7 @@
 #                                                |___/        
     default_border pixel 2
 
-    font pango:Fira Code Nerf Font 13px 
+    font pango:Fira Code Nerf Font Mono 13px 
 
     client.focused          #a3be8c #a3be8c #d8dee9 #88c0d0 #a3be8c
     client.focused_inactive #4c566a #4c566a #d8dee9 #88c0d0 #4c566a
@@ -56,6 +56,7 @@
 #|_|_| |_|    /_/ \___/ \__,_|\__| .__/ \__,_|\__|
 #                                |_|              
     output "*" bg ~/.config/wall.png fill
+    output "*" res 1920x1080
     input "type:keyboard" {
         xkb_layout "de"
     }
