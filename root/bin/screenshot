@@ -1,5 +1,10 @@
 #!/bin/bash
-selection=$(printf "fullscreen\nwindow\nregion" | wofi -p "Screenshot kind" -L 3 -w 1 --show dmenu)
+
+selection=$1
+
+[[ -z $selection ]] && selection=$(printf "fullscreen\nwindow\nregion" | wofi -p "Screenshot kind" -L 3 -w 1 --show dmenu)
+[[ -z $selection ]] && echo "Nothing was selected." && exit 0
+
 if [[ $selection == fullscreen ]]; then
     grim - | swappy -f -
 elif [[ $selection == region ]]; then

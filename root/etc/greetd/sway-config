@@ -10,6 +10,7 @@ bindsym $mod+x exec swaynag \
 
 include /etc/sway/config.d/*o
 
+output "*" res 1920x1080
 input "type:keyboard" xkb_layout "de"
 input "type:touchpad" {
 	dwt enabled

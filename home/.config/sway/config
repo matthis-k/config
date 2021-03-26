@@ -88,7 +88,8 @@
     bindsym $mod+c exec edit-config
     bindsym $mod+x exec wlogout -p layer-shell -r 50
     bindsym $mod+y exec $menu
-    bindsym $mod+s exec screenshot w; mode "default"; 
+    bindsym $mod+s exec screenshot
+    bindsym $mod+Shift+s exec screenshot region
     # close
     bindsym $mod+q kill
     # reload
