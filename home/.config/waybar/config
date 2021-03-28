@@ -34,6 +34,8 @@
 		"custom/shutdown"
 	],
     "custom/menu": {
+        "tooltip-format": "Applications",
+        "tooltip": true,
         "format": "",
         "on-click": "wofi -p Run -L 10 -w 2 --show drun"
     },
@@ -143,6 +145,7 @@
 		"tooltip": false
 	},
 	"custom/shutdown": {
+        "tooltip-format": "Power menu",
 		"format": "",
 		"on-click": "wlogout -p layer-shell -r 50",
 	},

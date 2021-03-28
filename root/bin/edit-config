@@ -20,4 +20,4 @@ do
     echo $e
 done | wofi -O alphabetical -L 10 -w 1 --show dmenu | awk '{ print $3 }')
 
-[[ -z $selected ]] || alacritty -e sh -c "nvim $selected"
+[[ -z $selected ]] || alacritty -e bash -c "sleep 0.1 && nvim $selected"
