@@ -11,6 +11,7 @@ vim.g.nobackup = true
 vim.g.noerrbells = true
 vim.g.smartcase = true
 vim.g.hlsearch = false
+vim.g.clipboard = "unnamedplus"
 
 -- set all local buffer options also to global, otherwise they dont work
 vim.o.expandtab = true

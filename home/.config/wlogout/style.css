@@ -54,6 +54,12 @@ button {
 	background-color: #2e3440;
 }
 
+button:hover {
+    border: 2px solid #b48ead;
+	background-color: #434c5e;
+	outline-style: none;
+}
+
 button:focus, button:active {
     border: 2px solid #a3be8c;
 	background-color: #434c5e;

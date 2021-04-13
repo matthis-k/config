@@ -1,0 +1,5 @@
+#!/bin/bash
+
+for file in "$(yad --title="float" --file --multiple --separator '\n')"; do
+    rmapi -ni put $file
+done

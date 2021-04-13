@@ -12,5 +12,6 @@
 ~/.config/wallpapers
 /bin/screenshot
 /bin/edit-config
+/bin/rmput
 /bin/exclusive-wofi
 /etc/greetd

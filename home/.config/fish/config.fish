@@ -19,7 +19,7 @@ alias ':q'='exit'
 alias 'ls'='l -l --group-directories-first'
 alias 'lst'='ls --tree --level 3'
 alias 'la'='ls -a'
-alias 'l.'='ls -A | grep "^\."'
+alias 'l.'='ls -a | grep "^\."'
 alias 'mkd'='mkdir'
 alias 'rmd'='rm -rf'
 alias 'cp'='cp -v'
@@ -34,3 +34,7 @@ alias 'please'='sudo'
 alias 'fucking'='sudo'
 
 #test "$TERM" != "linux" && starship init fish | source
+
+function fish_command_not_found
+    __fish_default_command_not_found_handler $argv
+end

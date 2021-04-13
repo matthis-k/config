@@ -3,8 +3,8 @@
 options=(
     "alacritty - $HOME/config/home/.config/alacritty/alacritty.yml"
     "bin - $HOME/config/root/bin"
-    "config - $HOME/config"
-    "edit-config - $HOME/config/root/bin/edit-config"
+    "config - $HOME/config/home/.config"
+    # "edit-config - $HOME/config/root/bin/edit-config"
     "fish - $HOME/config/home/.config/fish"
     "neovim - $HOME/config/home/.config/nvim"
     "sway - $HOME/config/home/.config/sway/config"
