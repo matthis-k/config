@@ -1,5 +1,7 @@
 #!/bin/bash
 
-for file in "$(yad --title="float" --file --multiple --separator '\n')"; do
+files=$(yad --title="float" --file --multiple --separator '\n')
+[[ -z $files ]] && echo "No files were selected" && exit 0
+for file in $files; do
     rmapi -ni put $file
 done

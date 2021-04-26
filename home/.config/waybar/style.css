@@ -72,6 +72,16 @@ window#waybar {
     border-radius: 5px;
 }
 
+#custom-shutdown {
+    color: @bgkgrey;
+    background: @red;
+}
+
+#custom-menu {
+    color: @bgkgrey;
+    background: @purple;
+}
+
 #custom-separator {
 	opacity: 0;
 	padding: 0px;

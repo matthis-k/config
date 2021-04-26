@@ -81,11 +81,13 @@
     bindsym $mod+$up focus up
     bindsym $mod+$down focus down
     # applications
-    bindsym $mod+return exec $terminal
     bindsym ctrl+alt+w exec firefox
     bindsym ctrl+alt+p exec bitwarden
     bindsym ctrl+alt+t exec $terminal
     bindsym ctrl+alt+a exec $menu
+    bindsym ctrl+alt+u exec rmput
+
+    bindsym $mod+return exec $terminal
     bindsym $mod+c exec edit-config
     bindsym $mod+x exec wlogout -p layer-shell -r 50
     bindsym $mod+y exec $menu
