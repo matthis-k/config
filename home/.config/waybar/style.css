@@ -35,7 +35,7 @@
 @define-color purple    @nord15;
 
 * {
-	font-size: 16px;
+	font-size: 16;
 	font-family: "Fira Code Nerd Font Mono", "Font Awesome 5 Free";
 }
 
@@ -122,7 +122,6 @@ window#waybar {
 #taskbar,
 #tray,
 #window {
-	margin: 5px;
 	padding: 0;
 }
 #taskbar button {
@@ -131,6 +130,9 @@ window#waybar {
 }
 #taskbar button.active {
     border: 1px solid @green;
+}
+#taskbar {
+    border: 1px solid transparent;
 }
 
 #tray,
