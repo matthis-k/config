@@ -1,5 +1,5 @@
 vim.cmd('colorscheme nord')
-vim.cmd('set guifont=Fira\\ hjgCode')
+vim.cmd('set guifont=Fira\\ Code')
 
 vim.cmd('syntax on')
 

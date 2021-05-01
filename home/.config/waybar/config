@@ -8,9 +8,7 @@
 		"custom/separator",
 		"sway/workspaces",
 		"custom/separator",
-		"idle_inhibitor",
-		"custom/separator",
-        "wlr/taskbar"
+		"idle_inhibitor"
 	],
 	"modules-center": [
 		"custom/separator",
@@ -22,11 +20,11 @@
         "tray",
 		"custom/separator",
 		"sway/mode",
-		"custom/separator",
-		"backlight",
-		"custom/separator",
-		//"bluetooth",
 		//"custom/separator",
+		//"backlight",
+		"custom/separator",
+		"bluetooth",
+		"custom/separator",
         "network",
 		"custom/separator",
 		"pulseaudio",
@@ -54,7 +52,7 @@
             "enabled": " [X]",
             "disabled": " [ ]"
         },
-        "tooltip-format": "{status}",
+        "tooltip-format": "{}",
         "on-click": "blueberry"
     },
     "network": {
