@@ -13,6 +13,7 @@ require'lspconfig'.jsonls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.rust_analyzer.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.yamlls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.sumneko_lua.setup({ settings = { Lua = { diagnostics = { globals = { 'vim' } } } }, on_attach = require('completion').on_attach })
+require'lspconfig'.jdtls.setup{ on_attach = require('completion').on_attach }
 
 vim.lsp.handlers['textDocument/codeAction'] = require'lsputil.codeAction'.code_action_handler
 vim.lsp.handlers['textDocument/references'] = require'lsputil.locations'.references_handler
