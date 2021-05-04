@@ -8,11 +8,12 @@ vim.g.completion_abbr_length = 30
 vim.g.completion_menu_length = 30
 
 require'lspconfig'.clangd.setup{ on_attach = require('completion').on_attach }
+require'lspconfig'.ccls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.cssls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.jsonls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.rust_analyzer.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.yamlls.setup{ on_attach = require('completion').on_attach }
-require'lspconfig'.sumneko_lua.setup({ settings = { Lua = { diagnostics = { globals = { 'vim' } } } }, on_attach = require('completion').on_attach })
+require'lspconfig'.sumneko_lua.setup({ settings = { cmd = { "/bin/lua-language-server" }, Lua = { runtime = { version = 'LuaJIT', path = vim.split(package.path, ';'), }, diagnostics = { globals = { 'vim' } } } },workspace = { library = { [vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true, }, }, on_attach = require('completion').on_attach }) 
 require'lspconfig'.jdtls.setup{ on_attach = require('completion').on_attach }
 
 vim.lsp.handlers['textDocument/codeAction'] = require'lsputil.codeAction'.code_action_handler

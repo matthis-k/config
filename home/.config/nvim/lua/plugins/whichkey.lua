@@ -1,41 +1,38 @@
-vim.call('which_key#register', '<space>', 'g:which_key_space')
+require("which-key").setup {}
 
-vim.g.which_key_space = {
-    ['name'] = 'Spacebar',
-    ['l'] = {
-        ['name'] = 'lsp',
-        ['b'] = 'build',
-        ['g'] = {
-            ['name'] = 'goto',
-            ['d'] = 'definition',
-            ['i'] = 'implementation',
-            ['f'] = 'declaration'
+local wk = require("which-key")
+wk.register({
+    f = "file explorer",
+    l = {
+        name = "lsp",
+        b = { "build" },
+        f = { "format" },
+        g = { 
+            name = "goto",
+            d = { "definition" },
+            i = { "implementation" },
+            f = { "declaration" },
         },
-        ['h'] = 'hover',
-        ['r'] = 'rename',
-        ['f'] = 'format',
-        ['i'] = 'inlay hints',
-        ['q'] = 'code actions'
+        h = { "hover" },
+        i = { "inlay hints" },
+        q = { "code actions" },
+        r = { "rename" },
     },
-    ['o'] = {
-        ['name'] = 'options'
+    o = {
+        name = "options",
     },
-    ['f'] = 'file explorer',
-    ['t'] = {
-        ['name'] = 'terminal',
-        ['t'] = 'toggle',
-        ['q'] = 'close',
-        ['f'] = 'first',
-        ['n'] = 'next',
-        ['p'] = 'previous',
-        ['l'] = 'last',
-        ['c'] = 'new'
+    t = {
+        name = "terminal",
+        c = "new",
+        f = "first",
+        l = "last",
+        n = "next",
+        p = "previous",
+        q = "quit",
+        t = "toggle",
     },
-    ['v'] = {
-        ['name'] = 'vim',
-        ['r'] ='reload'
-    }
-}
-
--- this fixes the wrong arrow display (bg and fg swapped)
-vim.cmd('autocmd FileType which_key highlight WhichKeySeperator ctermbg=0 guibg=#434C5E  ctermfg=10 guifg=#A3BE8C')
+    v = {
+        name = "vim",
+        r ="reload",
+    },
+}, { prefix = "<leader>" })
