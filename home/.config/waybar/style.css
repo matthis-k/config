@@ -95,9 +95,12 @@ window#waybar {
 }
 
 #workspaces button {
-	color: @lightblue;
+    color: @purple;
 	margin: 0;
 	padding: 1px 3px 0px 3px;
+}
+#workspaces button.persistent {
+	color: @lightblue;
 }
 #workspaces button.focused {
     border: 1px solid @green;

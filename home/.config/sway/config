@@ -11,7 +11,7 @@
     set $up k
     set $right l
     set $terminal alacritty
-    set $menu wofi -O alphabetical -L 7 -w 2 --show drun
+    set $menu wofi -O alphabetical -w 2 --show drun
     set $browser firefox
 
 #          _           _                     _         _      
@@ -83,6 +83,8 @@
     # applications
     bindsym ctrl+alt+w exec firefox
     bindsym ctrl+alt+p exec bitwarden
+    bindsym ctrl+alt+v exec pavucontrol
+    bindsym ctrl+alt+b exec blueberry
     bindsym ctrl+alt+t exec $terminal
     bindsym ctrl+alt+a exec $menu
     bindsym ctrl+alt+u exec rmput
