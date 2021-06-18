@@ -11,6 +11,7 @@ bat
 bitwarden-bin
 blueberry
 dust
+emote
 exa
 fd
 feh
@@ -38,8 +39,10 @@ spicetify-cli-git
 spotify-tui
 swappy
 sway
+swayshot
 tokei
 ttf-font-awesome
+uberzug
 vscode-css-languageserver-bin
 vscode-json-language
 waybar
