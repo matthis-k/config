@@ -7,6 +7,8 @@ vim.g.completion_trigger_on_delete = 1
 vim.g.completion_abbr_length = 30
 vim.g.completion_menu_length = 30
 
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()]]
+
 require'lspconfig'.clangd.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.ccls.setup{ on_attach = require('completion').on_attach }
 require'lspconfig'.cssls.setup{ on_attach = require('completion').on_attach }

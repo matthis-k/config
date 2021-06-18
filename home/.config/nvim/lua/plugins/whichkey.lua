@@ -33,6 +33,7 @@ wk.register({
     },
     v = {
         name = "vim",
-        r ="reload",
+        r = "reload",
+        c = "configure neovim",
     },
 }, { prefix = "<leader>" })

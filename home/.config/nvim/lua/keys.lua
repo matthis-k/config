@@ -28,6 +28,7 @@ vim.api.nvim_set_keymap("n", "<leader>tc", ":FloatermNew<cr>", { silent = true }
 vim.api.nvim_set_keymap("n", "<leader>f", ":NvimTreeToggle<cr>", { silent = true })
 
 vim.api.nvim_set_keymap("n", "<leader>vr", ":Reload<cr>", { silent = true })
+vim.api.nvim_set_keymap("n", "<leader>vc", ":cd ~/.config/nvim<cr>", { silent = true })
 
 vim.api.nvim_set_keymap("n", "j", "gj", { silent = true })
 vim.api.nvim_set_keymap("v", "j", "gj", { silent = true })

@@ -88,6 +88,7 @@
     bindsym ctrl+alt+t exec $terminal
     bindsym ctrl+alt+a exec $menu
     bindsym ctrl+alt+u exec rmput
+    bindsym ctrl+alt+e exec emote
 
     bindsym $mod+return exec $terminal
     bindsym $mod+c exec edit-config
